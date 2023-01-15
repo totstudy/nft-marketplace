@@ -15,9 +15,7 @@ export const config = {
 }
 
 handler.post(async function handlePost ({ body, files }, response) {
-
   try {
-    console.log(process.env.PINATA_API_KEY);
     const fileUrl = await uploadFileToIPFS(files.file[0])
     const metadata = {
       name: body.name[0],

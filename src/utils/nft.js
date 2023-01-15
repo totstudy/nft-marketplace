@@ -29,7 +29,7 @@ export function mapCreatedAndOwnedTokenIdsAsMarketItems (marketplaceContract, nf
   }
 }
 
-export function mapMarketItem (marketItem, metadata, tokenId, account, hasMarketApproval) {
+export async function mapMarketItem (marketItem, metadata, tokenId, account, hasMarketApproval) {
   return {
     price: marketItem.price ? ethers.utils.formatUnits(marketItem.price, 'ether') : undefined,
     tokenId: marketItem.tokenId || tokenId,
@@ -39,7 +39,7 @@ export function mapMarketItem (marketItem, metadata, tokenId, account, hasMarket
     owner: marketItem.owner || account,
     sold: marketItem.sold || false,
     canceled: marketItem.canceled || false,
-    image: metadata.image,
+    image: await metadata.image,
     name: metadata.name,
     description: metadata.description,
     hasMarketApproval: hasMarketApproval || false

@@ -42,7 +42,7 @@ export default function NFTPrice ({ nft }) {
       variant="h6"
       color="text.secondary"
       >
-        {/* <span style={{ display: 'inline-block', transform: 'translateY(3px)' }}>
+        <span style={{ display: 'inline-block', transform: 'translateY(3px)' }}>
           <Image
             alt='Matic'
             src='/'
@@ -51,7 +51,7 @@ export default function NFTPrice ({ nft }) {
             onMouseEnter={handlePopoverOpen}
             onMouseLeave={handlePopoverClose}
           />
-        </span> */}
+        </span>
         <Popover
           id="mouse-over-popover"
           sx={{

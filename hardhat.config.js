@@ -1,5 +1,5 @@
 require('@nomiclabs/hardhat-waffle')
-require('dotenv').config();
+require('dotenv').config()
 require('hardhat-gas-reporter')
 
 /**

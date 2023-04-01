@@ -1,6 +1,7 @@
 require('@nomiclabs/hardhat-waffle')
 require('dotenv').config()
 require('hardhat-gas-reporter')
+require("@nomiclabs/hardhat-etherscan")
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -17,6 +18,11 @@ module.exports = {
       gas: 5500000,
       gasPrice: 7000000000
     },
+  },
+  etherscan: {
+    apiKey: {
+      polygonMumbai: process.env.YOUR_POLYGONSCAN_API_KEY
+    }
   },
   solidity: {
     version: '0.8.4',
